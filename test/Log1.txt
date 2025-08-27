@@ -1,0 +1,203 @@
+[11:31:29.143] <主线程> [Start] 程序版本：Release 2.10.6 (367)
+[11:31:29.143] <主线程> [Start] 识别码：2B12-4CAC-ACD3-E19F，已解锁反馈主题
+[11:31:29.143] <主线程> [Start] 程序路径：C:\Program Files (x86)\zcygod\MC-setup\2.exe
+[11:31:29.143] <主线程> [Start] 系统编码：gb2312 (936, GBK=True)
+[11:31:29.143] <主线程> [Start] 管理员权限：True
+[11:31:29.299] <主线程> [Start] 第一阶段加载用时：515 ms
+[11:31:30.328] <主线程> [UI] 刷新主题：0
+[11:31:30.531] <主线程> [Loader] 加载器 Minecraft Folder List 状态改变：Loading
+[11:31:30.531] <主线程> [Start] 第二阶段加载用时：1076 ms
+[11:31:30.562] <L/Minecraft Folder List> [Loader] 加载器 Minecraft Folder List 状态改变：Finished
+[11:31:31.826] <主线程> [System] 窗口已置顶，位置：(350, 155), 900 x 550
+[11:31:31.841] <Animation> [Animation] 动画线程开始
+[11:31:31.841] <主线程> [Start] 第三阶段加载用时：219 ms
+[11:31:31.857] <初始化> [Start] 加载 DLL：Newtonsoft.Json
+[11:31:31.857] <初始化> [System] 获取资源：Newtonsoft.Json
+[11:31:31.904] <Version Check> [Launch] Minecraft 文件夹：C:\Program Files (x86)\zcygod\MC-setup\.minecraft\
+[11:31:32.029] <初始化> [Java] 缓存中有 1 个可用的 Java：
+[11:31:32.029] <初始化> [Java]  - JRE 8 (8.0.51)：C:\Users\Administrator\AppData\Roaming\.minecraft\runtime\jre-legacy\bin\
+[11:31:32.138] <初始化> [Loader] 加载器 DlClientList Mojang 状态改变：Loading
+[11:31:32.138] <初始化> [Loader] 加载器 PCL 服务 状态改变：Loading
+[11:31:32.138] <L/PCL 服务> [Server] 正在连接到 PCL 服务器
+[11:31:32.138] <TryClearTaskTemp> [System] 开始清理任务缓存文件夹
+[11:31:32.153] <TryClearTaskTemp> [System] 已清理任务缓存文件夹
+[11:31:32.153] <L/DlClientList Mojang> [Net] 发起网络请求（GET，https://launchermeta.mojang.com/mc/game/version_manifest.json），最大超时 10000
+[11:31:32.153] <Telemetry> [System] 匿名数据上报：启动
+[11:31:32.169] <L/PCL 服务> [Net] 发起网络请求（GET，https://pcl2-server-1253424809.file.myqcloud.com/notice.cfg{CDN}），最大超时 10000
+[11:31:32.169] <Telemetry> [Start] 加载 DLL：CacheCow.Client.FileStore
+[11:31:32.169] <Telemetry> [System] 获取资源：CacheCow.Client.FileStore
+[11:31:32.169] <Telemetry> [Start] 加载 DLL：CacheCow.Common
+[11:31:32.169] <Telemetry> [System] 获取资源：CacheCow.Common
+[11:31:32.169] <Telemetry> [Start] 加载 DLL：CacheCow.Client
+[11:31:32.169] <Telemetry> [System] 获取资源：CacheCow.Client
+[11:31:32.512] <L/PCL 服务> [Server] 服务器公告：174|366|367|5，无需更新
+[11:31:32.528] <L/PCL 服务> [Loader] 加载器 PCL 服务 状态改变：Finished
+[11:31:32.543] <主线程> [Loader] 加载器 Loader Skin Legacy 状态改变：Loading
+[11:31:32.559] <L/Loader Skin Legacy> [Loader] 加载器 Loader Skin Legacy 状态改变：Finished
+[11:31:32.715] <主线程> [Animation] 两个动画帧间隔 858 ms
+[11:31:32.746] <主线程> [System] DPI：96，系统版本：Microsoft Windows NT 6.1.7601 Service Pack 1，PCL 位置：C:\Program Files (x86)\zcygod\MC-setup\2.exe
+[11:31:32.746] <主线程> [Page] 实例化：清空主页 UI，来源为空
+[11:31:32.762] <主线程> [Minecraft] 启动按钮：Minecraft 版本：C:\Program Files (x86)\zcygod\MC-setup\.minecraft\versions\1.12.2\
+[11:31:32.777] <主线程> [Loader] 加载器 登录 状态改变：Loading
+[11:31:32.777] <L/登录> [Launch] 登录加载已开始
+[11:31:32.777] <L/登录> [Loader] 加载器 Loader Login Legacy 状态改变：Loading
+[11:31:32.793] <L/Loader Login Legacy> [Launch] 登录方式：离线（1）
+[11:31:32.793] <L/Loader Login Legacy> [Loader] 加载器 Loader Login Legacy 状态改变：Finished
+[11:31:32.809] <L/登录> [Launch] 登录加载已结束
+[11:31:32.809] <L/登录> [Loader] 加载器 登录 状态改变：Finished
+[11:31:32.871] <主线程> [Skin] 载入头像成功：Loader Skin Legacy
+[11:31:32.933] <主线程> [Start] 加载 DLL：System.Net.Http.Formatting
+[11:31:32.933] <主线程> [System] 获取资源：System.Net.Http.Formatting
+[11:31:33.058] <L/DlClientList Mojang> [Download] Mojang 官方源加载耗时：905ms，可优先使用官方源
+[11:31:33.058] <L/DlClientList Mojang> [Loader] 加载器 DlClientList Mojang 状态改变：Finished
+[11:31:33.932] <主线程> [Control] 按下单选按钮：设置
+[11:31:34.213] <主线程> [Control] 切换主要页面：Setup, -1
+[11:31:34.228] <主线程> [Animation] 两个动画帧间隔 297 ms
+[11:31:35.663] <主线程> [Control] 按下单选按钮：启动
+[11:31:35.663] <主线程> [Control] 切换主要页面：Launch, -1
+[11:31:36.802] <主线程> [Control] 按下按钮：版本设置
+[11:31:36.865] <主线程> [Control] 切换主要页面：VersionSetup, 0
+[11:31:37.988] <主线程> [Control] 按下单选列表项：Mod 管理
+[11:31:39.220] <主线程> [Control] 按下单选列表项：设置
+[11:31:42.465] <主线程> [Control] 展开卡片：高级启动选项
+[11:31:44.368] <主线程> [Control] 按下单选列表项：概览
+[11:31:45.101] <主线程> [Control] 按下图标按钮：BtnTitleInner
+[11:31:45.101] <主线程> [Control] 切换主要页面：Launch, -1
+[11:31:45.772] <主线程> [Control] 按下单选按钮：设置
+[11:31:45.772] <主线程> [Control] 切换主要页面：Setup, -1
+[11:31:46.773] <主线程> [Control] 展开卡片：高级启动选项
+[11:31:49.287] <主线程> [Control] 按下单选按钮：启动
+[11:31:49.288] <主线程> [Control] 切换主要页面：Launch, -1
+[11:31:50.710] <主线程> [Control] 按下单选按钮：设置
+[11:31:50.710] <主线程> [Control] 切换主要页面：Setup, -1
+[11:31:52.741] <主线程> [Control] 按下单选按钮：启动
+[11:31:52.741] <主线程> [Control] 切换主要页面：Launch, -1
+[11:31:53.804] <主线程> [Control] 按下单选按钮：设置
+[11:31:53.804] <主线程> [Control] 切换主要页面：Setup, -1
+[11:31:54.570] <主线程> [Control] 按下单选按钮：启动
+[11:31:54.586] <主线程> [Control] 切换主要页面：Launch, -1
+[11:31:55.225] <主线程> [Control] 按下按钮：启动游戏
+[11:31:55.241] <主线程> [Loader] 加载器 Loader Launch 状态改变：Loading
+[11:31:55.319] <L/Loader Launch> [Launch] 预检测已通过
+[11:31:55.319] <L/Loader Launch> [Download] 开始后台检查资源文件索引
+[11:31:55.319] <L/Loader Launch> [Loader] 加载器 后台更新资源文件索引 状态改变：Loading
+[11:31:55.335] <L/Loader Launch> [Loader] 加载器 后台分析资源文件索引地址 状态改变：Loading
+[11:31:55.335] <L/Loader Launch> [Loader] 加载器 登录 状态改变：Waiting
+[11:31:55.335] <L/Loader Launch> [Loader] 加载器 Minecraft 启动 状态改变：Loading
+[11:31:55.335] <L/Loader Launch> [Loader] 加载器 获取 Java 状态改变：Loading
+[11:31:55.335] <L/Loader Launch> [Loader] 加载器 登录 状态改变：Loading
+[11:31:55.335] <L/后台分析资源文件索引地址> [Download] 版本 1.12.2 对应的资源文件索引为 1.12
+[11:31:55.335] <L/Loader Launch> [Loader] 加载器 补全文件 状态改变：Loading
+[11:31:55.335] <L/Loader Launch> [Loader] 加载器 下载支持库文件（主加载器） 状态改变：Loading
+[11:31:55.335] <L/Loader Launch> [Loader] 加载器 分析缺失支持库文件 状态改变：Loading
+[11:31:55.335] <L/登录> [Launch] 登录加载已开始
+[11:31:55.335] <L/登录> [Launch] 登录加载已结束
+[11:31:55.335] <L/登录> [Loader] 加载器 登录 状态改变：Finished
+[11:31:55.335] <L/Loader Launch> [Loader] 加载器 下载资源文件（主加载器） 状态改变：Loading
+[11:31:55.335] <L/Loader Launch> [Loader] 加载器 分析资源文件索引地址 状态改变：Loading
+[11:31:55.335] <L/Loader Launch> [Taskbar] Minecraft 启动 已加入任务列表
+[11:31:55.335] <L/分析资源文件索引地址> [Download] 版本 1.12.2 对应的资源文件索引为 1.12
+[11:31:55.350] <L/后台分析资源文件索引地址> [Download] 无需更新资源文件索引，取消
+[11:31:55.350] <L/后台分析资源文件索引地址> [Loader] 加载器 后台分析资源文件索引地址 状态改变：Aborted
+[11:31:55.350] <L/后台分析资源文件索引地址> [Loader] 加载器 后台更新资源文件索引 状态改变：Aborted
+[11:31:55.350] <L/后台分析资源文件索引地址> [Loader] 加载器 后台下载资源文件索引 状态改变：Aborted
+[11:31:55.350] <L/后台分析资源文件索引地址> [Download] 后台下载资源文件索引 已取消！
+[11:31:55.350] <L/后台分析资源文件索引地址> [Loader] 加载线程 后台分析资源文件索引地址 (10) 已中断但线程正常运行至结束，输出被弃用（最新线程：-1）
+[11:31:55.366] <L/分析资源文件索引地址> [Loader] 加载器 分析资源文件索引地址 状态改变：Finished
+[11:31:55.366] <L/分析资源文件索引地址> [Loader] 加载器 下载资源文件索引 状态改变：Loading
+[11:31:55.381] <L/下载 918> [Loader] 加载器 下载资源文件索引 状态改变：Finished
+[11:31:55.381] <L/下载 918> [Loader] 加载器 分析缺失资源文件 状态改变：Loading
+[11:31:55.428] <L/分析缺失支持库文件> [Minecraft] 获取支持库列表：1.12.2
+[11:31:55.553] <L/获取 Java> [Launch] Java 版本需求：最低 1.8.0.0，最高 999.999.999.999
+[11:31:55.584] <L/获取 Java> [Java] 开始完全遍历查找：C:\Program Files (x86)\zcygod\MC-setup\
+[11:31:55.600] <L/获取 Java> [Java] 开始完全遍历查找：C:\Program Files (x86)\zcygod\MC-setup\.minecraft\
+[11:31:55.615] <L/获取 Java> [Java] 开始完全遍历查找：C:\Program Files (x86)\zcygod\MC-setup\.minecraft\versions\1.12.2\
+[11:31:55.615] <L/获取 Java> [Java] 排序后的 Java 优先顺序：
+[11:31:55.615] <L/获取 Java> [Java]  - JRE 8 (8.0.51)：C:\Users\Administrator\AppData\Roaming\.minecraft\runtime\jre-legacy\bin\
+[11:31:55.631] <L/获取 Java> [System] 执行外部命令并等待返回结果：C:\Users\Administrator\AppData\Roaming\.minecraft\runtime\jre-legacy\bin\java.exe -version
+[11:31:55.771] <L/分析缺失支持库文件> [Loader] 加载器 分析缺失支持库文件 状态改变：Finished
+[11:31:55.771] <L/分析缺失支持库文件> [Loader] 加载器 下载支持库文件 状态改变：Loading
+[11:31:55.771] <L/下载 915> [Loader] 加载器 下载支持库文件 状态改变：Finished
+[11:31:55.771] <L/下载 915> [Loader] 加载器 下载支持库文件（主加载器） 状态改变：Finished
+[11:31:55.834] <L/分析缺失资源文件> [Loader] 加载器 分析缺失资源文件 状态改变：Finished
+[11:31:55.834] <L/分析缺失资源文件> [Loader] 加载器 下载资源文件 状态改变：Loading
+[11:31:55.834] <L/下载 924> [Loader] 加载器 下载资源文件 状态改变：Finished
+[11:31:55.834] <L/下载 924> [Loader] 加载器 下载资源文件（主加载器） 状态改变：Finished
+[11:31:55.834] <L/下载 924> [Loader] 加载器 补全文件 状态改变：Finished
+[11:31:55.993] <L/获取 Java> [Java] 最终选定的 Java：JRE 8 (8.0.51)：C:\Users\Administrator\AppData\Roaming\.minecraft\runtime\jre-legacy\bin\
+[11:31:55.993] <L/获取 Java> [Launch] 选择的 Java：JRE 8 (8.0.51)：C:\Users\*************\AppData\Roaming\.minecraft\runtime\jre-legacy\bin\
+[11:31:55.993] <L/获取 Java> [Loader] 加载器 获取 Java 状态改变：Finished
+[11:31:56.008] <L/获取 Java> [Loader] 加载器 获取启动参数 状态改变：Loading
+[11:31:56.008] <L/获取启动参数> [Launch] 开始获取 Minecraft 启动参数
+[11:31:56.008] <L/获取启动参数> [Launch] 获取旧版 JVM 参数
+[11:31:56.024] <L/获取启动参数> [Java] 选定的 Java Wrapper 路径：C:\Program Files (x86)\zcygod\MC-setup\PCL\JavaWrapper.jar
+[11:31:56.024] <L/获取启动参数> [System] 获取资源：JavaWrapper
+[11:31:56.024] <L/获取启动参数> [Launch] 旧版 JVM 参数获取成功：
+[11:31:56.024] <L/获取启动参数> [Launch]  -Dlog4j2.formatMsgNoLookups=true -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xmn399m -Xmx2662m "-Djava.library.path=C:\Program Files (x86)\zcygod\MC-setup\.minecraft\versions\1.12.2\1.12.2-natives" -cp ${classpath} -Doolloo.jlw.tmpdir="C:\Program Files (x86)\zcygod\MC-setup\PCL" -jar "C:\Program Files (x86)\zcygod\MC-setup\PCL\JavaWrapper.jar" net.minecraft.client.main.Main
+[11:31:56.024] <L/获取启动参数> [Launch] 获取旧版 Game 参数
+[11:31:56.024] <L/获取启动参数> [Launch] 旧版 Game 参数获取成功
+[11:31:56.024] <L/获取启动参数> [Minecraft] 获取支持库列表：1.12.2
+[11:31:56.040] <L/获取启动参数> [Launch] Minecraft 启动参数：
+[11:31:56.040] <L/获取启动参数> [Launch]  -Dlog4j2.formatMsgNoLookups=true -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xmn399m -Xmx2662m ""-Djava.library.path=C:\Program" Files (x86)\zcygod\MC-setup\.minecraft\versions\1.12.2\1.12.2-natives" -cp "C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\com\mojang\patchy\1.3.9\patchy-1.3.9.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\oshi-project\oshi-core\1.1\oshi-core-1.1.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\net\java\dev\jna\jna\4.4.0\jna-4.4.0.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\net\java\dev\jna\platform\3.4.0\platform-3.4.0.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\com\ibm\icu\icu4j-core-mojang\51.2\icu4j-core-mojang-51.2.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\net\sf\jopt-simple\jopt-simple\5.0.3\jopt-simple-5.0.3.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\io\netty\netty-all\4.1.9.Final\netty-all-4.1.9.Final.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\com\google\guava\guava\21.0\guava-21.0.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\commons-io\commons-io\2.5\commons-io-2.5.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\com\mojang\authlib\1.5.25\authlib-1.5.25.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\com\mojang\realms\1.10.22\realms-1.10.22.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\org\apache\commons\commons-compress\1.8.1\commons-compress-1.8.1.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\org\apache\httpcomponents\httpclient\4.3.3\httpclient-4.3.3.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\org\apache\httpcomponents\httpcore\4.3.2\httpcore-4.3.2.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\it\unimi\dsi\fastutil\7.1.0\fastutil-7.1.0.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\org\apache\logging\log4j\log4j-api\2.8.1\log4j-api-2.8.1.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\org\apache\logging\log4j\log4j-core\2.8.1\log4j-core-2.8.1.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\org\lwjgl\lwjgl\lwjgl\2.9.4-nightly-20150209\lwjgl-2.9.4-nightly-20150209.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.4-nightly-20150209\lwjgl_util-2.9.4-nightly-20150209.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\libraries\com\mojang\text2speech\1.10.3\text2speech-1.10.3.jar;C:\Program Files (x86)\zcygod\MC-setup\.minecraft\versions\1.12.2\1.12.2.jar" "-Doolloo.jlw.tmpdir="C:\Program" Files (x86)\zcygod\MC-setup\PCL" -jar ""C:\Program" Files (x86)\zcygod\MC-setup\PCL\JavaWrapper.jar" net.minecraft.client.main.Main --username 1 --version 1.12.2 --gameDir "C:\Program Files (x86)\zcygod\MC-setup\.minecraft\versions\1.12.2" --assetsDir "C:\Program Files (x86)\zcygod\MC-setup\.minecraft\assets" --assetIndex 1.12 --uuid 00000**********************6B6BB --accessToken 00000**********************6B6BB --userType msa --versionType PCL --height 480 --width 854
+[11:31:56.040] <L/获取启动参数> [Loader] 加载器 获取启动参数 状态改变：Finished
+[11:31:56.040] <L/获取启动参数> [Loader] 加载器 解压文件 状态改变：Loading
+[11:31:56.055] <L/解压文件> [Launch] 正在解压 Natives 文件
+[11:31:56.055] <L/解压文件> [Loader] 加载器 解压文件 状态改变：Finished
+[11:31:56.086] <L/解压文件> [Loader] 加载器 预启动处理 状态改变：Loading
+[11:31:56.118] <L/预启动处理> [System] 无需调整显卡设置：C:\Users\Administrator\AppData\Roaming\.minecraft\runtime\jre-legacy\bin\javaw.exe
+[11:31:56.118] <L/预启动处理> [System] 无需调整显卡设置：C:\Program Files (x86)\zcygod\MC-setup\2.exe
+[11:31:56.118] <L/预启动处理> [Launch] 需要的语言为 zh_cn，当前语言为 zh_cn，无需修改
+[11:31:56.118] <L/预启动处理> [Loader] 加载器 预启动处理 状态改变：Finished
+[11:31:56.149] <L/预启动处理> [Loader] 加载器 执行自定义命令 状态改变：Loading
+[11:31:56.149] <L/执行自定义命令> [Loader] 加载器 执行自定义命令 状态改变：Finished
+[11:31:56.196] <L/执行自定义命令> [Loader] 加载器 启动进程 状态改变：Loading
+[11:31:56.227] <L/启动进程> [Launch] 已启动游戏进程：C:\Users\*************\AppData\Roaming\.minecraft\runtime\jre-legacy\bin\javaw.exe
+[11:31:56.227] <L/启动进程> [Loader] 加载器 启动进程 状态改变：Finished
+[11:31:56.227] <L/启动进程> [Loader] 加载器 等待游戏窗口出现 状态改变：Loading
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] 
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] ~ 基础参数 ~
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] PCL 版本：Release 2.10.6 (367)
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] 游戏版本：原版 1.12.2（识别为 1.12.2）
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] 资源版本：1.12
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] 版本继承：无
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] 分配的内存：2.6 GB（2662 MB）
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] MC 文件夹：C:\Program Files (x86)\zcygod\MC-setup\.minecraft\
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] 版本文件夹：C:\Program Files (x86)\zcygod\MC-setup\.minecraft\versions\1.12.2\
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] 版本隔离：True
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] HMCL 格式：False
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] Java 信息：JRE 8 (8.0.51)：C:\Users\*************\AppData\Roaming\.minecraft\runtime\jre-legacy\bin\
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] 环境变量：未设置
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] Natives 文件夹：C:\Program Files (x86)\zcygod\MC-setup\.minecraft\versions\1.12.2\1.12.2-natives
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] 
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] ~ 登录参数 ~
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] 玩家用户名：1
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] AccessToken：0000000000003001998F501BC686B6BB
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] ClientToken：0000000000003001998F501BC686B6BB
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] UUID：0000000000003001998F501BC686B6BB
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] 登录方式：Legacy
+[11:31:56.227] <L/等待游戏窗口出现> [Launch] 
+[11:31:56.242] <L/等待游戏窗口出现> [Launch] [11208] 开始 Minecraft 日志监控
+[11:31:56.242] <L/等待游戏窗口出现> [Launch] [全局] 出现运行中的 Minecraft
+[11:31:58.569] <Minecraft Watcher PID 11208> [Launch] [11208] 日志 1/5：已出现日志输出
+[11:31:58.569] <Minecraft Watcher PID 11208> [Launch] [11208] 日志 2/5：游戏用户已设置
+[11:32:01.120] <Minecraft Watcher PID 11208> [Launch] [11208] Minecraft 窗口已加载：（3212478）
+[11:32:01.120] <Minecraft Watcher PID 11208> [Launch] [11208] 日志 3/5：LWJGL 版本已确认
+[11:32:01.120] <Minecraft Watcher PID 11208> [Launch] [11208] Minecraft 加载已完成
+[11:32:01.125] <L/等待游戏窗口出现> [Loader] 加载器 等待游戏窗口出现 状态改变：Finished
+[11:32:01.205] <L/等待游戏窗口出现> [Loader] 加载器 结束处理 状态改变：Loading
+[11:32:01.208] <L/结束处理> [Launch] 开始启动结束处理
+[11:32:01.208] <L/结束处理> [Launch] 启动器可见性：5
+[11:32:01.208] <L/结束处理> [Loader] 加载器 结束处理 状态改变：Finished
+[11:32:01.209] <L/结束处理> [Loader] 加载器 Minecraft 启动 状态改变：Finished
+[11:32:01.285] <主线程> [Taskbar] Minecraft 启动 已移出任务列表
+[11:32:01.410] <Telemetry> [System] 匿名数据上报：Minecraft 启动成功
+[11:32:01.437] <主线程> [UI] 弹出提示：1.12.2 启动成功！
+[11:32:01.894] <主线程> [Control] 按下附加按钮：关闭 Minecraft
+[11:32:01.897] <Minecraft Watcher PID 11208> [Launch] [11208] Minecraft 日志监控已退出
+[11:32:01.898] <主线程> [Launch] [全局] 已无运行中的 Minecraft
+[11:32:01.901] <主线程> [Launch] [11208] 尝试强制结束 Minecraft 进程
+[11:32:01.902] <主线程> [Launch] [11208] 已强制结束 Minecraft 进程
+[11:32:01.904] <主线程> [UI] 弹出提示：已关闭运行中的 Minecraft！
+[11:32:03.096] <主线程> [Control] 按下图标按钮：BtnTitleClose
+[11:32:03.111] <主线程> [System] 收到关闭指令
+[11:32:03.330] <主线程> [System] 程序已退出，返回值：Success
