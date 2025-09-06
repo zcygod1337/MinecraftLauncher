@@ -12,7 +12,7 @@ void slow_print(string s) {
 bool file(string name) {
 	ifstream file(name.c_str());
 	return !file.fail();
-}//²é¿´ÎÄ¼şÊÇ·ñ´æÔÚ 
+}//æŸ¥çœ‹æ–‡ä»¶æ˜¯å¦å­˜åœ¨ 
 void ero(){
 	slow_print("dev by ");
 	cout << "\n\n\n\n" << endl;
@@ -36,7 +36,7 @@ int main(){
 	cout << "dev by zcygod" << endl;
 	start:
 	if(file("username.txt")){
-		cout << "¼ì²âµ½ÄúÒÑÉèÖÃÓÃ»§Ãû£¬ÊÇ·ñÆô¶¯£¿(ÇëÊäÈë(1)Æô¶¯,(2)ÖØÉèÓÃ»§Ãû)" << endl;
+		cout << "æ£€æµ‹åˆ°æ‚¨å·²è®¾ç½®ç”¨æˆ·åï¼Œæ˜¯å¦å¯åŠ¨ï¼Ÿ(è¯·è¾“å…¥(1)å¯åŠ¨,(2)é‡è®¾ç”¨æˆ·å)" << endl;
 		ifstream in("username.txt");
 		string username;
 		in>>username;
@@ -49,7 +49,7 @@ int main(){
     "-XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump "
     "-Xmn399m "  
     "-Xmx2662m " 
-    "-Djava.library.path=\".\\.minecraft\\versions\\1.12.2\\1.12.2-natives\" "  // Ô­Éú¿âÂ·¾¶
+    "-Djava.library.path=\".\\.minecraft\\versions\\1.12.2\\1.12.2-natives\" "  // åŸç”Ÿåº“è·¯å¾„
     "-cp "
     "\""
     ".\\.minecraft\\libraries\\com\\mojang\\patchy\\1.3.9\\patchy-1.3.9.jar;"
@@ -96,7 +96,7 @@ int main(){
     "--uuid 00000FFFFFFFFFFFFFFFFFFFFFF6B6BB "  
     "--accessToken 00000FFFFFFFFFFFFFFFFFFFFFF6B6BB "  
     "--userType msa "
-    "--versionType zcy "
+    "--versionType ZcyCppLauncher "
     "--height 480 " 
     "--width 854"; 
         	cout << "debug:" << command << endl;
@@ -109,15 +109,16 @@ int main(){
 		}
 		
 	}else {
-		cout << "ÇëÏÈÉèÖÃÓÃ»§Ãû!" << endl;
+		cout << "è¯·å…ˆè®¾ç½®ç”¨æˆ·å!" << endl;
 		ofstream out("username.txt");
-		cout << "ÇëÎÊÄúµÄÓÃ»§ÃûÊÇ£¿£¨²»¿ÉÖĞÎÄ£©" <<endl;
+		cout << "è¯·é—®æ‚¨çš„ç”¨æˆ·åæ˜¯ï¼Ÿï¼ˆä¸å¯ä¸­æ–‡ï¼‰" <<endl;
 		string username;
 		cin >> username;
 		out << username;
 		out.close();
-		cout << "ÉèÖÃ³É¹¦£¡" <<endl;
+		cout << "è®¾ç½®æˆåŠŸï¼" <<endl;
 		goto start;
 	}
 	return 0;
 }
+
