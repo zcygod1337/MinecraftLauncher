@@ -1,11 +1,11 @@
 package swing;
 
 import cpp.Connect;
+import swing.custom.ImageButton;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
+import java.awt.event.*;
 
 /**
  * @author XeContrast
@@ -21,7 +21,40 @@ public class initGui {
         jFrame.setSize(570, 320);
         jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         jFrame.setLayout(null);
-        jFrame.setVisible(true);
+    }
+
+    public static void showImage() {
+        ImageButton imageButton = new ImageButton("R.png",false);
+        imageButton.setBounds(10,jFrame.getHeight() / 2 - 25,50,50);
+        jFrame.add(imageButton);
+
+        ImageButton imageButton1 = new ImageButton("RM.png",false);
+        imageButton1.setBounds(jFrame.getWidth() - 70,jFrame.getHeight() / 2 - 25,50,50);
+        jFrame.add(imageButton1);
+
+        new Thread(() -> {
+            while (true) {
+                imageButton.setLocation(10,jFrame.getHeight() / 2 - 25);
+                imageButton1.setLocation(jFrame.getWidth() - 70,jFrame.getHeight() / 2 - 25);
+                if (pages <= 0) {
+                    pages = 0;
+                }
+            }
+        }).start();
+
+        imageButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                pages -= 1;
+            }
+        });
+
+        imageButton1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                pages += 1;
+            }
+        });
     }
 
     public static void showStartButton() {
@@ -47,16 +80,15 @@ public class initGui {
 
     public static void showPages() {
         JLabel text = new JLabel("Pages: " + pages);
-        text.setBounds(jFrame.getWidth() / 2 - 40,-20,80,80);
+        text.setBounds(jFrame.getWidth() / 2 - 40, -20, 80, 80);
         container.add(text);
 
-        jFrame.addComponentListener(new ComponentAdapter() {
-            @Override
-            public void componentResized(ComponentEvent e) {
-                text.setLocation(jFrame.getWidth() / 2 - 40,-20);
+        new Thread(() -> {
+            while (true) {
+                text.setLocation(jFrame.getWidth() / 2 - 40, -20);
                 text.setText("Pages: " + pages);
             }
-        });
+        }).start();
     }
 
     public static void setUsernameButton() {
