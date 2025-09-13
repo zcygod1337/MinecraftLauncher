@@ -17,12 +17,13 @@ namespace download{
         out.close();
     }
     void download_java(){
-        std::cout << "Î´¼ì²âµ½java»·¾³£¬ÕýÔÚÏÂÔØ" << std::endl;
+        
         if(!file("java_good")){
+            std::cout << "æœªæ£€æµ‹åˆ°javaçŽ¯å¢ƒï¼Œæ­£åœ¨ä¸‹è½½" << std::endl;
             system(".\\silent_downloader.exe -url https://github.com/zcygod1337/download/releases/download/JAVA_8/jre.7z");
             system(".\\7z.exe x jre.7z");
             if(!file("java_good")){
-                std::cout << "ÄãµÄÍøÂç±¬Õ¨ÁË£¬Çë·ÉÍù¹úÍâÏÂÔØ" << std::endl; 
+                std::cout << "ä½ çš„ç½‘ç»œçˆ†ç‚¸äº†ï¼Œè¯·é£žå¾€å›½å¤–ä¸‹è½½" << std::endl; 
                 while (1);
             }
         
