@@ -21,11 +21,27 @@ d8888888P  `Y8bod8P'     .8'     `8oooooo.  `Y8bod8P' `Y8bod88P"
                                                                  
 */
 void help(){
-	cout <<endl <<"Ê¹ÓÃ°ïÖú\n -run [version] --username [username]   ÒÔusernameÎªÓÃ»§Ãû£¬Æô¶¯[version]°æ±¾µÄmc£¬Èç¹ûÃ»ÓÐÕÒµ½¸Ã°æ±¾mc,»áÔÚµ±Ç°Ä¿Â¼ÏÂÉú³ÉÃû×ÖÎª\"not_found\"µÄÎÄ¼þ"
-	<< "-download [version] ÏÂÔØ[version]°æ±¾,ºóÃæÍüÁË¡£(Èç¹ûÍ¬Ê±ÓÐ¶à¸öÈÎÎñ£¬Ä¬ÈÏÖ´ÐÐ×îºóÒ»¸öÈÎÎñ1)";
+	cout <<endl <<"ä½¿ç”¨å¸®åŠ©\n -run [version] --username [username]   ä»¥usernameä¸ºç”¨æˆ·åï¼Œå¯åŠ¨[version]ç‰ˆæœ¬çš„mcï¼Œå¦‚æžœæ²¡æœ‰æ‰¾åˆ°è¯¥ç‰ˆæœ¬mc,ä¼šåœ¨å½“å‰ç›®å½•ä¸‹ç”Ÿæˆåå­—ä¸º\"not_found\"çš„æ–‡ä»¶"
+	<< "-download [version] ä¸‹è½½[version]ç‰ˆæœ¬,åŽé¢å¿˜äº†ã€‚(å¦‚æžœåŒæ—¶æœ‰å¤šä¸ªä»»åŠ¡ï¼Œé»˜è®¤æ‰§è¡Œæœ€åŽä¸€ä¸ªä»»åŠ¡1)";
 }
+bool file(string name) {
+	ifstream file(name.c_str());
+	return !file.fail();
+}//æŸ¥çœ‹æ–‡ä»¶æ˜¯å¦å­˜åœ¨ 
 string task;
-int main(int argc,char *argv[]){/*--MinecraftLauncher by zcygod version 1.0.2,Ìí¼ÓÃüÁîÐÐÖ§³Ö*/
+int main(int argc,char *argv[]){/*--MinecraftLauncher by zcygod version 1.0.2,æ·»åŠ å‘½ä»¤è¡Œæ”¯æŒ*/
+	if(!file("java_good")){
+		cout << "ç¬¬ä¸€æ¬¡è¿è¡Œï¼Œè‡ªåŠ¨ä¸‹è½½java" << endl;
+		system(".\\silent_downloader -url https://github.com/zcygod1337/download/releases/download/JAVA_8/jre.7z");
+		system(".\\7z.exe x jre.7z");
+		if(!file("java_good")){
+			cout << "ä½ çš„ç½‘ç»œçˆ†ç‚¸äº†ï¼Œè¯·é£žå¾€å›½å¤–ä¸‹è½½" << endl; 
+			while(1);
+			return 0;
+		}
+		
+		
+	}
 	emptys.clear();
 	if(argc==1){
 		help();
@@ -57,7 +73,7 @@ int main(int argc,char *argv[]){/*--MinecraftLauncher by zcygod version 1.0.2,Ìí
 			}
 		}
 		if(!flag){
-			cout << "Ã»ÓÐÄãÒªÆô¶¯µÄ°æ±¾" << endl; 
+			cout << "æ²¡æœ‰ä½ è¦å¯åŠ¨çš„ç‰ˆæœ¬" << endl; 
 			
 		}
 		minecraft::version=version;
@@ -65,7 +81,7 @@ int main(int argc,char *argv[]){/*--MinecraftLauncher by zcygod version 1.0.2,Ìí
 		minecraft::java_path=".\\jre\\bin\\java.exe";
 	}else if(task=="download"){
 		download::download_version(version);
-		;;//cppÄ¬ÈÏ²»Ö§³ÖÎÄ¼þ¿â£¬¹ÊÊ¹ÓÃpythonÊµÏÖÁËÒ»¸ösilent_downloader,¼òµ¥µ÷ÓÃ 
+		;;//cppé»˜è®¤ä¸æ”¯æŒæ–‡ä»¶åº“ï¼Œæ•…ä½¿ç”¨pythonå®žçŽ°äº†ä¸€ä¸ªsilent_downloader,ç®€å•è°ƒç”¨ 
 	}
 	while(1);
 }
