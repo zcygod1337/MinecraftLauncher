@@ -11,3 +11,5 @@
 # First of all
 
 You Should install Java(Version: 21) and install all kinds of C++ and Python Version
+
+zcygod 正在重构 main.cpp,添加链接库支持（以后写的东西可以模块化）
