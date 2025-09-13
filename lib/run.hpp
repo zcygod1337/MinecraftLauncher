@@ -7,7 +7,7 @@ namespace minecraft {
     std::string version;
     std::string username; 
     std::string java_path;
-    std::mc_dir=".\\.minecraft";
+    std::string mc_dir=".\\.minecraft";
     void run_client() {
         std::string command = java_path + 
             " -Xms2G -Xmx4G" + 

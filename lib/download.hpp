@@ -4,8 +4,8 @@
 //QWQ
 namespace download{
 	void download_version(std::string version){
-		cout << endl << "ÎÒ²»»áqwq" << endl << endl;
-		while(1);
+		std::string command=".\\download_version.py "+version;
+		system(command.c_str());
 	}
 	
 };
