@@ -12,9 +12,9 @@ namespace download{
     void download_version(std::string version){
         std::string command="downloader.exe "+version;
         system(command.c_str());
-        ofstream out("version.txt",ios::app);
-        out << endl << version;
-        out.close();
+        // std::ofstream out("version.txt",ios::app);
+        // std::out << std::endl << version;
+        // out.close();
     }
     void download_java(){
         
