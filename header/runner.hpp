@@ -66,22 +66,23 @@ namespace launcher{
         "--height 480 " 
         "--width 854"; 
         void launch(){
-            string temp;
-            ifstream in("version.txt");
-            bool flag=false;
-            while(in>> temp){
-                if(temp==version){
-                    system(command.c_str());
-                    flag=true;
-                    break;
-                }
-            }
-            if(!flag){
-                cout << "错误：未检测到版本 "+version+"，请先下载该版本"<<endl;
-                cout << "按任意键退出"<<endl;
-                while(1);
-            }
-            in.close();
+            system(command.c_str());
+            // string temp;
+            // ifstream in("version.txt");
+            // bool flag=false;
+            // while(in>> temp){
+            //     if(temp==version){
+            //         system(command.c_str());
+            //         flag=true;
+            //         break;
+            //     }
+            // }
+            // if(!flag){
+            //     cout << "错误：未检测到版本 "+version+"，请先下载该版本"<<endl;
+            //     cout << "按任意键退出"<<endl;
+            //     while(1);
+            // }
+            // in.close();
         }
 };
 #endif
