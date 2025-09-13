@@ -10,10 +10,10 @@ void help(){
     cout << "========================================================="<<endl;
     cout << "Minecraft Launcher by C++"<<endl;  
     cout << "          --dev by zcygod" << endl;
-    cout << "1. ./{filename} -run {version} --username {name} ÒÔ{username}ÔËÐÐ{version}°æ±¾µÄminecraft"<<endl;
-    cout << "2. ./{filename} -download {version} ÏÂÔØ{version}°æ±¾µÄMinecraft¼°Ö§³Ö¿â"<<endl;
-    cout << "3. ./{filename} -download_jdk8 ÏÂÔØjava8£¨Ä¬ÈÏµÚÒ»´ÎÔËÐÐ»áÖ´ÐÐ£©"<<endl;
-    cout << "3. ./{filename} -help »ñÈ¡°ïÖú"<<endl;
+    cout << "1. ./{filename} -run {version} --username {name} ä»¥{username}è¿è¡Œ{version}ç‰ˆæœ¬çš„minecraft"<<endl;
+    cout << "2. ./{filename} -download {version} ä¸‹è½½{version}ç‰ˆæœ¬çš„MinecraftåŠæ”¯æŒåº“"<<endl;
+    cout << "3. ./{filename} -download_jdk8 ä¸‹è½½java8ï¼ˆé»˜è®¤ç¬¬ä¸€æ¬¡è¿è¡Œä¼šæ‰§è¡Œï¼‰"<<endl;
+    cout << "3. ./{filename} -help èŽ·å–å¸®åŠ©"<<endl;
     cout << "========================================================="<<endl;
 }
 int main(int argc,char* argv[]){
@@ -25,38 +25,40 @@ int main(int argc,char* argv[]){
         while(1);
     }
     if(argc<=1){
-        cout<< endl << "¼ì²âµ½ ÄúÃ»ÓÐÉèÖÃ²ÎÊý£¬×Ô¶¯Ìø×ªµ½-help"<<endl;
+        cout<< endl << "æ£€æµ‹åˆ° æ‚¨æ²¡æœ‰è®¾ç½®å‚æ•°ï¼Œè‡ªåŠ¨è·³è½¬åˆ°-help"<<endl;
         goto test;
     }
     for(int i=1;i<argc;i++){
-        if(argv[i]=="-download"){
+        if((string)argv[i]=="-download"){
+            cout << "debug:download" << endl;
             if(i+1<argc){
                 download::download_version(argv[i+1]);
-                cout << "ÏÂÔØÍê³É£¬°´ÈÎÒâ¼üÍË³ö"<<endl;
+                cout << "ä¸‹è½½å®Œæˆï¼ŒæŒ‰ä»»æ„é”®é€€å‡º"<<endl;
                 while(1);
             }else{
-                cout << "´íÎó£º-download ºóÈ±ÉÙ°æ±¾ºÅ"<<endl;
-                cout << "°´ÈÎÒâ¼üÍË³ö"<<endl;
+                cout << "é”™è¯¯ï¼š-download åŽç¼ºå°‘ç‰ˆæœ¬å·"<<endl;
+                cout << "æŒ‰ä»»æ„é”®é€€å‡º"<<endl;
                 while(1);
             }
         }
-        if(argv[i]=="-download_jdk8"){
+        if((string)argv[i]=="-download_jdk8"){
             download::download_java();
-            cout << "ÏÂÔØÍê³É£¬°´ÈÎÒâ¼üÍË³ö"<<endl;
+            cout << "ä¸‹è½½å®Œæˆï¼ŒæŒ‰ä»»æ„é”®é€€å‡º"<<endl;
             while(1);
         }
-        if(argv[i]=="-run"){
+        if((string)argv[i]=="-run"){
             launcher::version=argv[i+1];
             if(i+3<argc&&argv[i+2]=="--username"){
                 launcher::username=argv[i+3];
             }else{
-                cout << "´íÎó£º-run ºóÈ±ÉÙ --username {name}"<<endl;
-                cout << "°´Ctrl+C"<<endl;
+                cout << "é”™è¯¯ï¼š-run åŽç¼ºå°‘ --username {name}"<<endl;
+                cout << "æŒ‰Ctrl+C"<<endl;
                 while(1);  
             }
             launcher::launch();
         }
 
     }
+    cout << "end" <<endl;
     while(true);
 }
