@@ -1,15 +1,30 @@
 # CppMinecraftLauncher
-> This is a Minecraft Launcher by C++,Python and Java(Coming Soon™)
+> This is a Minecraft Launcher by C++,Python（python即将消失),java(写前端的人神秘消失
 
-# How To build Launcher
+Updating Log
 
-    1. Getting our Launcher's src: 'gh repo clone zcygod1337/MinecraftLauncher'
-    2. Finishing your Gradle's Build Tasks
-    3. You Should Start Main.class
-    4. Enjoying?
+------
+> version 1.0.0
 
-# First of all
+[+]这个项目的第一个release版本，只是一个简单的命令行启动工具，安装包里塞了一整个Minecraft和java
 
-You Should install Java(Version: 21) and install all kinds of C++ and Python Version
+> version 1.0.1
 
-zcygod 正在重构 main.cpp,添加链接库支持（以后写的东西可以模块化）
+[+]本项目的第二个release版本（由于zcygod很脑残不会添加多个release，删除了1.0.0的release）
+
+使用了github作为源从云端下载 Minecraft和java，本质上还是命令行
+
+> version 1.0.2
+
+[+]本项目的第三个release版本
+
+使用了 mojang 官方API当做下载源.~~这次是真可以下载版本了~~
+
+添加了json解析，不再是命令行了
+
+(预计下个版本更新内容： 1.去除python的爬虫爬取文件，使用Cpp原生的WindowsAPI作为下载方式，添加第一个GUI，添加下载过的版本记录在.\version.txt的功能
+
+
+-------
+就这样
+本程序基于GPL-V3.0
