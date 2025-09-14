@@ -48,14 +48,13 @@ int main(int argc,char* argv[]){
         }
         if((string)argv[i]=="-run"){
             launcher::version=argv[i+1];
-            if(i+3<argc&&argv[i+2]=="--username"){
-                launcher::username=argv[i+3];
-            }else{
-                cout << "错误：-run 后缺少 --username {name}"<<endl;
-                cout << "按Ctrl+C"<<endl;
-                while(1);  
-            }
-            launcher::launch();
+            launcher::username=argv[i+3];
+            // }else{
+            //     cout << "错误：-run 后缺少 --username {name}"<<endl;
+            //     cout << "按Ctrl+C"<<endl;
+            //     while(1);  
+            // }
+            launcher::launch(launcher::version);
         }
 
     }
