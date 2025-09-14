@@ -380,6 +380,30 @@ def download_client(version_info, version_details, minecraft_dir):
     print("\n===== 客户端文件下载完成 =====")
     return True
 
+def export_version_info(version_info, version_details, minecraft_dir):
+    """导出版本信息供启动器使用"""
+    export_data = {
+        "version_id": version_info["id"],
+        "minecraft_dir": minecraft_dir,
+        "client_jar": os.path.join(minecraft_dir, "versions", version_info["id"], f"{version_info['id']}.jar"),
+        "natives_dir": os.path.join(minecraft_dir, "versions", version_info["id"], "natives"),
+        "assets_dir": os.path.join(minecraft_dir, "assets"),
+        "asset_index": version_details["assetIndex"]["id"],
+        "libraries": []
+    }
+    
+    # 收集库文件信息
+    for lib in version_details.get("libraries", []):
+        if "downloads" in lib and "artifact" in lib["downloads"]:
+            lib_path = os.path.join(minecraft_dir, "libraries", lib["downloads"]["artifact"]["path"])
+            export_data["libraries"].append(lib_path)
+    
+    # 保存到文件
+    with open("version_info.json", "w") as f:
+        json.dump(export_data, f, indent=4)
+    
+    print("已导出版本信息到 version_info.json")
+
 def download_minecraft(version):
     """下载完整的Minecraft版本"""
     global total_download_size, downloaded_size
@@ -450,6 +474,9 @@ def download_minecraft(version):
         
     if not download_natives(version_details, minecraft_dir, version_info["id"]):
         return False
+    
+    # 导出版本信息供启动器使用
+    export_version_info(version_info, version_details, minecraft_dir)
     
     print(f"\n===== Minecraft {version_info['id']} 已完整下载 =====")
     return True
