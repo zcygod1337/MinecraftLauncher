@@ -1,6 +1,5 @@
 package swing;
 
-import static swing.initGui.container;
 import static swing.initGui.jFrame;
 
 /**
