@@ -4,6 +4,7 @@
 #include <fstream>
 using namespace std;
 //爆炸后因为我不会写库于是狂暴请教豆包 
+//你再他妈的拿你个傻逼的稀屎硬编码写启动，我给你老妈子杀了
 namespace launcher {
     std::string username = "zcygod";
     std::string version;  // 版本将在启动时动态设置
@@ -191,3 +192,4 @@ namespace launcher {
 };
 #endif
     
+
