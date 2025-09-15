@@ -10,13 +10,12 @@ public class SwingMain {
     public static void startSwing() {
         initGui.init();
         initGui.showImage();
-        switch (initGui.pages) {
-            case 0:
-                initGui.setUsernameButton();
-                initGui.showStartButton();
-                initGui.showPages();
-                break;
-        }
+        initGui.showPages();
+        initGui.showStartButton();
+        initGui.setUsernameButton();
         jFrame.setVisible(true);
+        while (true) {
+            initGui.refresh();
+        }
     }
 }

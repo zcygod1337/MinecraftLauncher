@@ -4,7 +4,6 @@ import cpp.Connect;
 import swing.custom.ImageButton;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.*;
 
 /**
@@ -15,20 +14,35 @@ public class initGui {
     public static int pages = 0;
     public static String username = "";
     static JFrame jFrame = new JFrame("Minecraft Launcher");
-    static Container container = jFrame.getContentPane();
+    private static final JPanel container = (JPanel) jFrame.getContentPane();
+    private static ImageButton imageButton,imageButton1;
+    private static JButton startButton,setUsername;
+    private static JLabel usernameLabel,page;
     public static void init() {
-        jFrame.setLocation(570, 320);
-        jFrame.setSize(570, 320);
+        jFrame.setLocation(300, 200);
+        jFrame.setSize(1200, 800);
         jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         jFrame.setLayout(null);
     }
 
+    public static void refresh() {
+        if (pages != 0) {
+            startButton.setVisible(false);
+            setUsername.setVisible(false);
+            usernameLabel.setVisible(false);
+        } else {
+            startButton.setVisible(true);
+            setUsername.setVisible(true);
+            usernameLabel.setVisible(true);
+        }
+    }
+
     public static void showImage() {
-        ImageButton imageButton = new ImageButton("R.png",false);
+        imageButton = new ImageButton("R.png",false);
         imageButton.setBounds(10,jFrame.getHeight() / 2 - 25,50,50);
         jFrame.add(imageButton);
 
-        ImageButton imageButton1 = new ImageButton("RM.png",false);
+        imageButton1 = new ImageButton("RM.png",false);
         imageButton1.setBounds(jFrame.getWidth() - 70,jFrame.getHeight() / 2 - 25,50,50);
         jFrame.add(imageButton1);
 
@@ -58,11 +72,11 @@ public class initGui {
     }
 
     public static void showStartButton() {
-        JButton jButton = new JButton("Start");
-        jButton.setBounds(jFrame.getWidth() - 180,jFrame.getHeight() - 80,120,40);
-        container.add(jButton);
+        startButton = new JButton("Start");
+        startButton.setBounds(jFrame.getWidth() - 180,jFrame.getHeight() - 80,120,40);
+        container.add(startButton);
 
-        jButton.addActionListener(e -> {
+        startButton.addActionListener(e -> {
             if (username != null && !username.isEmpty()) {
                 Connect.connectCppApp(username);
             } else {
@@ -73,30 +87,36 @@ public class initGui {
         jFrame.addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
-                jButton.setLocation(jFrame.getWidth() - 140,jFrame.getHeight() - 80);
+                startButton.setLocation(jFrame.getWidth() - 140,jFrame.getHeight() - 80);
             }
         });
     }
 
     public static void showPages() {
-        JLabel text = new JLabel("Pages: " + pages);
-        text.setBounds(jFrame.getWidth() / 2 - 40, -20, 80, 80);
-        container.add(text);
+        page = new JLabel("Pages: " + pages);
+        page.setBounds(jFrame.getWidth() / 2 - 40, -20, 80, 80);
+        container.add(page);
+
+        jFrame.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                page.setLocation(jFrame.getWidth() / 2 - 40, -20);
+            }
+        });
 
         new Thread(() -> {
             while (true) {
-                text.setLocation(jFrame.getWidth() / 2 - 40, -20);
-                text.setText("Pages: " + pages);
+                page.setText("Pages: " + pages);
             }
         }).start();
     }
 
     public static void setUsernameButton() {
-        JLabel jLabel = new JLabel("Username: " + username);
-        jLabel.setBounds(10, 10, 80, 30);
-        container.add(jLabel);
+        usernameLabel = new JLabel("Username: " + username);
+        usernameLabel.setBounds(10, 10, 80, 30);
+        container.add(usernameLabel);
 
-        JButton setUsername = new JButton("SetUsername");
+        setUsername = new JButton("SetUsername");
         setUsername.setBounds(jFrame.getWidth() - 280,jFrame.getHeight() - 80,120,40);
         container.add(setUsername);
 
@@ -104,7 +124,7 @@ public class initGui {
             String input = JOptionPane.showInputDialog(null, "SetUsername");
             if (input != null) {
                 username = input.trim();
-                jLabel.setText("Username: " + username);
+                usernameLabel.setText("Username: " + username);
             }
         });
 
