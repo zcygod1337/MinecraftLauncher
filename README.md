@@ -1,5 +1,5 @@
-# CppMinecraftLauncher
-> This is a Minecraft Launcher by C++,Python（python即将消失),java(写前端的人神秘消失
+# MinecraftLauncher
+> This is a Minecraft Launcher by C++,Python（python即将消失),java
 
 Updating Log
 
@@ -16,16 +16,21 @@ Updating Log
 
 > version 1.0.2
 
-[+]本项目的第三个release版本
+[+]mojang 官方API当做下载源
 
-使用了 mojang 官方API当做下载源.~~这次是真可以下载版本了~~
+[+]json解析
 
-添加了json解析，不再是命令行了
+> version 1.0.3 (Future)
+ 
+[-]python的爬虫爬取文件
 
-(预计下个版本更新内容： 1.去除python的爬虫爬取文件，使用Cpp原生的WindowsAPI作为下载方式，添加第一个GUI，添加下载过的版本记录在.\version.txt的功能
-每个版本都要重构吗。。（在jre.7z中添加jre17,判断版本大于1.13就使用java17或者别的什么版本）
+[+]使用Cpp原生的WindowsAPI作为下载方式。
 
+[+]JavaGUI
 
+[+]添加下载过的版本记录在.\version.txt的功能
+
+[+]识别系统已下载的Java进行启动而不是在.7z中添加文件而变得更臃肿
 
 -------
 就这样
