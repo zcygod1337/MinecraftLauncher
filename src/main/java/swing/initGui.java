@@ -2,6 +2,7 @@ package swing;
 
 import cpp.Connect;
 import swing.custom.ImageButton;
+import swing.custom.LoginFrame;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -17,7 +18,8 @@ public class initGui {
     private static final JPanel container = (JPanel) jFrame.getContentPane();
     private static ImageButton imageButton,imageButton1;
     private static JButton startButton,setUsername;
-    private static JLabel usernameLabel,page;
+    private static JLabel page;
+    public static JLabel usernameLabel;
     public static void init() {
         jFrame.setLocation(300, 200);
         jFrame.setSize(1200, 800);
@@ -38,18 +40,18 @@ public class initGui {
     }
 
     public static void showImage() {
-        imageButton = new ImageButton("R.png",false);
-        imageButton.setBounds(10,jFrame.getHeight() / 2 - 25,50,50);
+        imageButton = new ImageButton("R.png");
+        imageButton.setBounds(10,5,50,50);
         jFrame.add(imageButton);
 
-        imageButton1 = new ImageButton("RM.png",false);
-        imageButton1.setBounds(jFrame.getWidth() - 70,jFrame.getHeight() / 2 - 25,50,50);
+        imageButton1 = new ImageButton("RM.png");
+        imageButton1.setBounds(jFrame.getWidth() - 70,5,50,50);
         jFrame.add(imageButton1);
 
         new Thread(() -> {
             while (true) {
-                imageButton.setLocation(10,jFrame.getHeight() / 2 - 25);
-                imageButton1.setLocation(jFrame.getWidth() - 70,jFrame.getHeight() / 2 - 25);
+                imageButton.setLocation(10,5);
+                imageButton1.setLocation(jFrame.getWidth() - 70,5);
                 if (pages <= 0) {
                     pages = 0;
                 }
@@ -113,19 +115,16 @@ public class initGui {
 
     public static void setUsernameButton() {
         usernameLabel = new JLabel("Username: " + username);
-        usernameLabel.setBounds(10, 10, 80, 30);
+        usernameLabel.setBounds(10, 10, 200, 100);
         container.add(usernameLabel);
 
-        setUsername = new JButton("SetUsername");
+        setUsername = new JButton("Login");
         setUsername.setBounds(jFrame.getWidth() - 280,jFrame.getHeight() - 80,120,40);
         container.add(setUsername);
 
         setUsername.addActionListener(e -> {
-            String input = JOptionPane.showInputDialog(null, "SetUsername");
-            if (input != null) {
-                username = input.trim();
-                usernameLabel.setText("Username: " + username);
-            }
+            LoginFrame loginFrame = new LoginFrame(jFrame);
+            loginFrame.setVisible(true);
         });
 
         jFrame.addComponentListener(new ComponentAdapter() {

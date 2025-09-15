@@ -8,10 +8,8 @@ import java.io.InputStream;
 
 public class ImageButton extends Component {
     private Image image;
-    private final boolean mirror;
 
-    public ImageButton(String file,boolean mirror) {
-        this.mirror = mirror;
+    public ImageButton(String file) {
         try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(file)) {
             if (inputStream == null) {
                 System.out.println("NoFind");
@@ -34,9 +32,6 @@ public class ImageButton extends Component {
         g2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
         try {
             g2d.drawImage(image, 0, 0, this.getWidth(), this.getHeight(), null);
-            if (mirror) {
-                g2d.scale(-1, 1);
-            }
         } finally {
             g2d.dispose();
         }
