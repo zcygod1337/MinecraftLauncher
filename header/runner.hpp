@@ -1,21 +1,18 @@
-//我不写大标签C++不知道是库，请勿去除
+//老子修不好这个狗屎了
 #ifndef _RUNNER_hpp
 #define _RUNNER_hpp
 #include <bits/stdc++.h>
 #include <fstream>
 using namespace std;
-//爆炸后因为我不会写库于是狂暴请教豆包 
-//你再他妈的拿你个傻逼的稀屎硬编码写启动，我给你老妈子杀了
 namespace launcher {
     std::string username = "zcygod";
-    std::string version;  // 版本将在启动时动态设置
+    std::string version;  
     std::string natives_dir;
     std::string client_jar;
     std::string game_dir;
     std::string assets_dir = ".\\.minecraft\\assets";
     std::string asset_index;
     std::string command;
-    std::string javapath = ".\\jre\\bin\\java.exe";
     
     vector<string> get_core_libraries() {
         return {
@@ -92,7 +89,6 @@ namespace launcher {
         };
     }
     
-    // 加载资源索引信息（从版本文件获取正确的assetIndex）
     void load_asset_index(const string& version_id) {
         string path = ".\\.minecraft\\versions\\" + version_id + "\\" + version_id + ".json";
         ifstream file(path);
@@ -105,7 +101,6 @@ namespace launcher {
         string content((istreambuf_iterator<char>(file)), istreambuf_iterator<char>());
         file.close();
         
-        // 提取资源索引
         size_t pos = content.find("\"assetIndex\"");
         if (pos != string::npos) {
             pos = content.find("\"id\":", pos) + 5;
@@ -125,19 +120,13 @@ namespace launcher {
         // 加载资源索引
         load_asset_index(version);
     }
-
-    // 设置Java路径
-    void set_java_path(const string& path) {
-        javapath = path;
-    }
     
-    // 构建启动命令（使用手动维护的核心库列表）
     void build_command() {
         // 获取核心库列表
         vector<string> libraries = get_core_libraries();
         string classpath;
         for (const string& lib : libraries) {
-            // 检查库文件是否存在，存在才添加到类路径
+            // 检查库文件是否存在，存在才添加到类路径(神秘.\\路径使zcygod大脑爆炸)
             if (ifstream(lib)) {
                 if (!classpath.empty()) {
                     classpath += ";";
@@ -151,9 +140,10 @@ namespace launcher {
         }
         classpath += "\"" + client_jar + "\"";
         
-        // 构建完整命令，使用javapath变量
+        // 构建完整命令（还是硬编码
+        
         command = 
-            "\"" + javapath + "\" " 
+            ".\\jre\\bin\\java.exe " 
             "-Dlog4j2.formatMsgNoLookups=true " 
             "-XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump " 
             "-Xmn399m "  
@@ -178,15 +168,12 @@ namespace launcher {
     void launch(const string& ver) {
         set_version(ver);
         build_command();
-        
-        // 输出命令用于调试
+    
         cout << "启动命令: " << command << endl;
         
-        // 执行命令
         system(command.c_str());
     }
     
-    // 保留原有launch方法的兼容性
     void launch() {
         if (!version.empty()) {
             build_command();
@@ -197,4 +184,4 @@ namespace launcher {
     }
 };
 #endif
-
+    
