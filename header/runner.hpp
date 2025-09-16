@@ -1,3 +1,4 @@
+//我不写大标签C++不知道是库，请勿取出
 #ifndef _RUNNER_hpp
 #define _RUNNER_hpp
 #include <bits/stdc++.h>
@@ -14,8 +15,8 @@ namespace launcher {
     std::string assets_dir = ".\\.minecraft\\assets";
     std::string asset_index;
     std::string command;
+    std::string javapath = ".\\jre\\bin\\java.exe";
     
-    // 获取所有版本通用的核心库列表（手动维护）
     vector<string> get_core_libraries() {
         return {
             // 基础依赖库
@@ -124,6 +125,11 @@ namespace launcher {
         // 加载资源索引
         load_asset_index(version);
     }
+
+    // 设置Java路径
+    void set_java_path(const string& path) {
+        javapath = path;
+    }
     
     // 构建启动命令（使用手动维护的核心库列表）
     void build_command() {
@@ -145,9 +151,9 @@ namespace launcher {
         }
         classpath += "\"" + client_jar + "\"";
         
-        // 构建完整命令
+        // 构建完整命令，使用javapath变量
         command = 
-            ".\\jre\\bin\\java.exe " 
+            "\"" + javapath + "\" " 
             "-Dlog4j2.formatMsgNoLookups=true " 
             "-XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump " 
             "-Xmn399m "  
@@ -191,5 +197,3 @@ namespace launcher {
     }
 };
 #endif
-    
-
