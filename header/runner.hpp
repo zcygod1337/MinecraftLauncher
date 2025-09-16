@@ -1,4 +1,4 @@
-//我不写大标签C++不知道是库，请勿取出
+//我不写大标签C++不知道是库，请勿去除
 #ifndef _RUNNER_hpp
 #define _RUNNER_hpp
 #include <bits/stdc++.h>
@@ -197,3 +197,4 @@ namespace launcher {
     }
 };
 #endif
+
