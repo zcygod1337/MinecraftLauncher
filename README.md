@@ -60,9 +60,9 @@ Updating Log
 
 > version 1.0.3 (Future)
  
-[-]python的爬虫爬取文件
+~~[-]python的爬虫爬取文件~~暂时无法实现，WindowsAPI没有解析文件
 
-[+]使用Cpp原生的WindowsAPI作为下载方式。
+~~[+]使用Cpp原生的WindowsAPI作为下载方式~~暂时无法实现，WindowsAPI没有解析文件
 
 [+]JavaGUI
 
