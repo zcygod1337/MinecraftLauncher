@@ -1,3 +1,36 @@
+> # 2025年9月16日15:57:53 眼瞎的Xe看不到我的新版release1.0.2已经拆分需要自己选择选项的东西为带参数的命令行指令，还在用老安卓1.0.0一万年前写的狗屎东西，已笑死，望周知
+
+------
+由于本项目团队有人过于傻逼，不会去看release，我就给本程序新版（以后也会是这样）的命令写一下
+
+'''
+main -run {version} --username {name}
+'''
+以{name}为用户名，启动{version}的版本。（前提是要有，没有主程序就自动爆炸）
+
+{目前只支持1.12.2的因为1.13mojang把minecraft大重写，我的硬编码无法识别，预计在1.0.3中修复这个问题，并添加JRE17支持}
+
+举例： main -run 1.8.9 --username zcygod
+
+以zcygod为名字启动1.8.9版本
+
+'''
+main -download {version}
+'''
+
+下载（如果下载过就是重新下载）版本为{version}的版本
+
+举例:
+
+main -download 1.9
+
+下载1.9版本的mc(from mojang API)
+
+
+
+------
+
+
 # MinecraftLauncher
 > This is a Minecraft Launcher by C++,Python（python即将消失),java
 
@@ -35,3 +68,6 @@ Updating Log
 -------
 就这样
 本程序基于GPL-V3.0
+
+-----
+
