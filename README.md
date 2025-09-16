@@ -27,6 +27,9 @@ main -download 1.9
 下载1.9版本的mc(from mojang API)
 
 
+main -help 
+
+我不用解释了吧
 
 ------
 
