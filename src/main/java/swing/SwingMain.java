@@ -9,13 +9,10 @@ import static swing.initGui.jFrame;
 public class SwingMain {
     public static void startSwing() {
         initGui.init();
-        initGui.showImage();
+        initGui.showDownloadButton();
         initGui.showPages();
         initGui.showStartButton();
         initGui.setUsernameButton();
         jFrame.setVisible(true);
-        while (true) {
-            initGui.refresh();
-        }
     }
 }
