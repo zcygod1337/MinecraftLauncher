@@ -1,9 +1,9 @@
 package swing;
 
 import cpp.Connect;
-import swing.custom.ImageButton;
 import swing.customFrame.DownloadFrame;
 import swing.customFrame.LoginFrame;
+import tools.ResourcesIO;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -16,18 +16,36 @@ import java.util.List;
  */
 public class initGui {
     public static int pages = 0;
-    public static String username = "";
     static JFrame jFrame = new JFrame("Minecraft Launcher");
     private static final JPanel container = (JPanel) jFrame.getContentPane();
     private static JButton startButton,setUsername,downloadButton;
     private static JLabel page;
     public static JLabel usernameLabel;
     public static List<String> usernameList = new ArrayList<>();
+    public static final JComboBox<Object> usernameB = new JComboBox<>();
+    public static String username = "";
     public static void init() {
         jFrame.setLocation(300, 200);
         jFrame.setSize(1200, 800);
         jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         jFrame.setLayout(null);
+    }
+
+    public static void usernameBox() {
+        usernameB.setBounds(10, 10, 120, 30);
+        for (String string : usernameList) {
+            usernameB.removeAll();
+            usernameB.addItem(string);
+        }
+        usernameB.setVisible(true);
+        container.add(usernameB);
+        if (usernameB.getSelectedItem() != null) {
+            username = usernameB.getSelectedItem().toString();
+        }
+        usernameB.addItemListener(e -> {
+            username = usernameB.getSelectedItem().toString();
+            usernameLabel.setText("Username: " + username);
+        });
     }
 
     public static void showDownloadButton() {
@@ -55,7 +73,7 @@ public class initGui {
 
         startButton.addActionListener(e -> {
             if (username != null && !username.isEmpty()) {
-                Connect.connectCppApp("main.exe");
+                Connect.connectCppApp(ResourcesIO.findFile("main.exe"),"-run","1.12.2","-username",username);
             } else {
                 JOptionPane.showMessageDialog(null, "NullName");
             }

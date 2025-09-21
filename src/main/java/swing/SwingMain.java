@@ -9,6 +9,7 @@ import static swing.initGui.jFrame;
 public class SwingMain {
     public static void startSwing() {
         initGui.init();
+        initGui.usernameBox();
         initGui.showDownloadButton();
         initGui.showPages();
         initGui.showStartButton();

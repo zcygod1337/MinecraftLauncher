@@ -1,20 +1,15 @@
 package cpp;
 
-import tools.ResourcesIO;
-
 import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Paths;
 
 public class Connect {
-    public static void connectCppApp(String filename) {
+    public static void connectCppApp(String... run) {
         new Thread(() -> {
-            ProcessBuilder pb = new ProcessBuilder(ResourcesIO.findFile(filename));
-            pb.directory(new File("F:\\FDP\\MinecraftLauncher\\src\\main\\resources"));
+            ProcessBuilder pb = new ProcessBuilder(run);
+            pb.directory(new File(".\\la"));
             Process p;
             try {
                 p = pb.start();
-
 
                 Thread outputThread = getThread(p.getInputStream(), "INFO: ");
 

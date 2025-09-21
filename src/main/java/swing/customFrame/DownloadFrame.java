@@ -1,8 +1,10 @@
 package swing.customFrame;
 
+import cpp.Connect;
 import json.readVer;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import tools.ResourcesIO;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,10 +18,21 @@ public class DownloadFrame extends JDialog {
         setSize(600, 200);
         setLocationRelativeTo(jFrame);
         setResizable(false);
-        setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
 
+        setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
+//        container.set(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+
+        JPanel typePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JLabel typeLabel = new JLabel("版本类型:");
         JComboBox<String> verType = new JComboBox<>(new String[]{"snapshot", "release"});
+        typePanel.add(typeLabel);
+        typePanel.add(verType);
+
+        JPanel versionPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JLabel versionLabel = new JLabel("版本号:");
         JComboBox<String> verSelection = new JComboBox<>();
+        versionPanel.add(versionLabel);
+        versionPanel.add(verSelection);
 
         loadVersionData(verType, verSelection);
 
@@ -29,14 +42,25 @@ public class DownloadFrame extends JDialog {
             }
         });
 
-        container.add(new JLabel("版本类型:"));
-        container.add(verType);
-        container.add(new JLabel("版本号:"));
-        container.add(verSelection);
+        container.add(typePanel);
+        container.add(Box.createRigidArea(new Dimension(0, 5)));
+        container.add(versionPanel);
+        container.add(Box.createVerticalGlue());
+
+        JPanel buttonPanel = new JPanel();
+        JButton confirmButton = new JButton("确定");
+        buttonPanel.add(confirmButton);
+        container.add(Box.createRigidArea(new Dimension(0, 20)));
+        container.add(buttonPanel);
+
+        confirmButton.addActionListener(e -> {
+            System.out.println(ResourcesIO.findFile("main.exe") + "-download" + verSelection.getSelectedItem().toString());
+            Connect.connectCppApp(ResourcesIO.findFile("main.exe"), "-download", verSelection.getSelectedItem().toString());
+        });
     }
 
     private void loadVersionData(JComboBox<String> verType, JComboBox<String> verSelection) {
-        JSONObject jsonObject = readVer.getJson();
+        JSONObject jsonObject = readVer.getJson("https://launchermeta.mojang.com/mc/game/version_manifest.json");
         if (jsonObject != null) {
             JSONArray jsonArray = jsonObject.getJSONArray("versions");
             for (int i = 0; i < jsonArray.length(); i++) {
@@ -51,7 +75,7 @@ public class DownloadFrame extends JDialog {
                 }
             }
         }
-
+        // 默认选择第一个版本
         if (verSelection.getItemCount() > 0) {
             verSelection.setSelectedIndex(0);
         }
@@ -61,7 +85,7 @@ public class DownloadFrame extends JDialog {
         String selectedType = (String) verType.getSelectedItem();
         verSelection.removeAllItems();
 
-        JSONObject jsonObject = readVer.getJson();
+        JSONObject jsonObject = readVer.getJson("https://launchermeta.mojang.com/mc/game/version_manifest.json");
         if (jsonObject != null) {
             JSONArray jsonArray = jsonObject.getJSONArray("versions");
             for (int i = 0; i < jsonArray.length(); i++) {

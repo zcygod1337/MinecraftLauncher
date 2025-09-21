@@ -47,10 +47,11 @@ public class LoginFrame extends JDialog {
             if (input.getText().isEmpty()) {
                 int answer = JOptionPane.showConfirmDialog(null,"Name is empty","OK?",JOptionPane.OK_CANCEL_OPTION);
             } else {
-                username = input.getText();
-                usernameList.add(username);
+                usernameList.add(input.getText());
+                usernameB.addItem(input.getText());
                 try {
                     LocalFileCreate.fileWriter.write("username: " + username);
+                    LocalFileCreate.fileWriter.newLine();
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }

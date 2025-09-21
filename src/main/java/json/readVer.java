@@ -8,9 +8,9 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class readVer {
-    public static JSONObject getJson() {
+    public static JSONObject getJson(String url) {
         try {
-            URL mojangURL = new URL("https://launchermeta.mojang.com/mc/game/version_manifest.json");
+            URL mojangURL = new URL(url);
 
             HttpURLConnection httpURLConnection = (HttpURLConnection) mojangURL.openConnection();
             httpURLConnection.setRequestMethod("GET");
