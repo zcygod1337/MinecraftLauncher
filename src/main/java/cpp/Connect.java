@@ -1,6 +1,9 @@
 package cpp;
 
+import swing.initGui;
+
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 public class Connect {
     public static void connectCppApp(String... run) {
@@ -42,9 +45,10 @@ public class Connect {
 
     private static Thread getThread(InputStream p, String x) {
         Thread outputThread = new Thread(() -> {
-            try (BufferedReader reader = new BufferedReader(new InputStreamReader(p))) {
+            try (BufferedReader reader = new BufferedReader(new InputStreamReader(p, StandardCharsets.UTF_8))) {
                 String line;
                 while ((line = reader.readLine()) != null) {
+                    initGui.area.append(x + line + "\n");
                     System.out.println(x + line);
                 }
             } catch (IOException e) {

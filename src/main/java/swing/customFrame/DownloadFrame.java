@@ -54,12 +54,16 @@ public class DownloadFrame extends JDialog {
         container.add(buttonPanel);
 
         confirmButton.addActionListener(e -> {
-            System.out.println(ResourcesIO.findFile("main.exe") + "-download" + verSelection.getSelectedItem().toString());
-            Connect.connectCppApp(ResourcesIO.findFile("main.exe"), "-download", verSelection.getSelectedItem().toString());
+            if (verSelection.getSelectedItem() != null) {
+                System.out.println(ResourcesIO.findFile("main.exe") + "-download" + verSelection.getSelectedItem().toString());
+                Connect.connectCppApp(ResourcesIO.findFile("main.exe"), "-download", verSelection.getSelectedItem().toString());
+            }
         });
     }
 
     private void loadVersionData(JComboBox<String> verType, JComboBox<String> verSelection) {
+        if (verType.getSelectedItem() == null)
+            return;
         JSONObject jsonObject = readVer.getJson("https://launchermeta.mojang.com/mc/game/version_manifest.json");
         if (jsonObject != null) {
             JSONArray jsonArray = jsonObject.getJSONArray("versions");

@@ -50,7 +50,7 @@ public class LoginFrame extends JDialog {
                 usernameList.add(input.getText());
                 usernameB.addItem(input.getText());
                 try {
-                    LocalFileCreate.fileWriter.write("username: " + username);
+                    LocalFileCreate.fileWriter.write("username: " + input.getText());
                     LocalFileCreate.fileWriter.newLine();
                 } catch (IOException ex) {
                     ex.printStackTrace();

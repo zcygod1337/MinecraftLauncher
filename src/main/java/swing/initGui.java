@@ -20,6 +20,8 @@ public class initGui {
     private static final JPanel container = (JPanel) jFrame.getContentPane();
     private static JButton startButton,setUsername,downloadButton;
     private static JLabel page;
+    private static final JScrollPane jScrollPane = new JScrollPane();
+    public static final JTextArea area = new JTextArea();
     public static JLabel usernameLabel;
     public static List<String> usernameList = new ArrayList<>();
     public static final JComboBox<Object> usernameB = new JComboBox<>();
@@ -29,6 +31,20 @@ public class initGui {
         jFrame.setSize(1200, 800);
         jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         jFrame.setLayout(null);
+    }
+
+    public static void showArea() {
+        area.setLineWrap(true);
+        area.setEditable(false);
+        jScrollPane.setBounds(10,80,jFrame.getWidth() - 40,jFrame.getHeight() - 250);
+        jScrollPane.setViewportView(area);
+        container.add(jScrollPane);
+        jFrame.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                jScrollPane.setBounds(10,80,jFrame.getWidth() - 40,jFrame.getHeight() - 250);
+            }
+    });
     }
 
     public static void usernameBox() {
@@ -43,8 +59,10 @@ public class initGui {
             username = usernameB.getSelectedItem().toString();
         }
         usernameB.addItemListener(e -> {
-            username = usernameB.getSelectedItem().toString();
-            usernameLabel.setText("Username: " + username);
+            if (usernameB.getSelectedItem() != null) {
+                username = usernameB.getSelectedItem().toString();
+                usernameLabel.setText("Username: " + username);
+            }
         });
     }
 
